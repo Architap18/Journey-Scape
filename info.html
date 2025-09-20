@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+    nav {
+            background-color: #050647;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+      
+    }
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #eee;
+      cursor: pointer;
+    }
+    .tabs button.active {
+      background: #ddd;
+      font-weight: bold;
+    }
+    .tab-content {
+      border: 1px solid #ccc;
+      padding: 20px;
+      background: #fff;
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    label {
+      display: block;
+      margin: 8px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+    }
+    button.submit {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hotels.html">Hotels & Resorts</a></li>
+      <li><a href="info.html">Travel Info</a></li>
+    </ul>
+  </nav>
+  <h1>Hotel Booking Page</h1>
+  
+    <form action="abc.html" class="inline" 
+    >
+    <button class="float-left submit-button;" >Home</button>
+
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab('book')">Book</button>
+    <button class="tablink" onclick="openTab('prices')">Prices (₹)</button>
+    <button class="tablink" onclick="openTab('places')">Places</button>
+  </div>
+
+  <!-- Booking Form -->
+  <div id="book" class="tab-content active">
+    <h2>Book a Hotel</h2>
+    <form>
+      <label for="destination">Destination</label>
+      <input type="text" id="destination" placeholder="Enter city">
+
+      <label for="checkin">Check-in</label>
+      <input type="date" id="checkin">
+
+      <label for="checkout">Check-out</label>
+      <input type="date" id="checkout">
+
+      <label for="guests">Guests</label>
+      <select id="guests">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4+</option>
+      </select>
+
+      <button class="submit" type="submit">Search Hotels</button>
+    </form>
+  </div>
+
+  <!-- Prices -->
+  <div id="prices" class="tab-content">
+    <h2>Hotel Prices</h2>
+    <p>Budget: ₹1,000 – ₹3,000 per night</p>
+    <p>Mid-range: ₹3,000 – ₹7,000 per night</p>
+    <p>Luxury: ₹7,000+ per night</p>
+  </div>
+
+  <!-- Places -->
+  <div id="places" class="tab-content">
+    <h2>Popular Places</h2>
+    <ul>
+      <li>Goa</li>
+      <li>Jaipur</li>
+      <li>Manali</li>
+      <li>Kerala</li>
+      <li>Mumbai</li>
+    </ul>
+  </div>
+
